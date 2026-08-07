@@ -1,7 +1,6 @@
 /*
-  Talen's personal page styles.
-  This file only affects contributors/talen/index.html — nothing site-wide.
-  Copy whatever you like from here into your own contributors/<you>/styles.css.
+  Arpan's personal page styles.
+  This file only affects contributors/adhikari-arpan/index.html — nothing site-wide.
 */
 
 .profile-hero {
@@ -46,41 +45,84 @@ section.block h2 {
   align-items: center;
   gap: 0.5rem;
 }
-section.block h2::before {
-  content: "";
-  width: 8px;
-  height: 8px;
-  border-radius: 2px;
-  background: linear-gradient(135deg, var(--accent-green), var(--accent-blue));
-}
-[data-theme="light"] section.block h2::before {
-  background: linear-gradient(135deg, var(--accent-pink-soft), var(--accent-lilac));
-}
 .links-row {
   display: flex;
   gap: 0.7rem;
   flex-wrap: wrap;
   margin-top: 0.5rem;
 }
-.viz-panel {
+
+/* ---------- Game panel ---------- */
+.game-panel {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 1.5rem;
 }
-.viz-panel p.caption {
+.game-panel p.caption {
   color: var(--text-secondary);
   font-size: 0.9rem;
   line-height: 1.6;
   margin: 0 0 1rem;
 }
-#mcmc-canvas-wrap {
+.game-canvas-wrap {
+  position: relative;
   display: flex;
   justify-content: center;
   border-radius: var(--radius-md);
   overflow: hidden;
   border: 1px solid var(--border);
-  background: #000;
+  background: #0d0d0d;
+}
+#snake-canvas {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  touch-action: none;
+}
+.snake-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, #0d0d0d 78%, transparent);
+  transition: opacity 0.15s ease;
+}
+.snake-overlay.hidden {
+  display: none;
+}
+.snake-overlay-inner {
+  text-align: center;
+  color: #f5f5f5;
+  padding: 1.5rem;
+}
+.snake-overlay-inner p:first-child {
+  font-family: var(--font-goofy);
+  font-size: 1.6rem;
+  margin: 0 0 0.4rem;
+}
+.snake-overlay-inner p#snake-overlay-sub {
+  font-size: 0.85rem;
+  color: #c8c8c8;
+  margin: 0 0 1rem;
+  max-width: 260px;
+}
+.snake-overlay-inner button {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.6rem 1.3rem;
+  border-radius: 999px;
+  border: 1px solid var(--accent-green);
+  background: var(--accent-green);
+  color: #061a13;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+.snake-overlay-inner button:hover {
+  transform: translateY(-1px);
 }
 .viz-controls {
   display: flex;
@@ -135,24 +177,3 @@ section.block h2::before {
   color: var(--text-secondary);
   font-size: 0.9rem;
 }
-
-/*
-  These map this page's specific tag pills to colors — keyed by the
-  data-pill attribute on each <span class="pill" data-pill="..."> below.
-  If you copy this pattern, swap in your own tags and hex values; a
-  data-pill value that doesn't have a matching rule just falls back to
-  plain text, it won't inherit Talen's colors.
-*/
-.pill[data-pill="python"] { --pill-color: #3ef2a1; }
-.pill[data-pill="cpp"] { --pill-color: #4d8bff; }
-.pill[data-pill="cuda"] { --pill-color: #ff5cb3; }
-.pill[data-pill="react"] { --pill-color: #ffd23f; }
-.pill[data-pill="oss"] { --pill-color: #33d9c1; }
-.pill[data-pill="bayes"] { --pill-color: #a56dff; }
-
-[data-theme="light"] .pill[data-pill="python"] { --pill-color: #2fb894; }
-[data-theme="light"] .pill[data-pill="cpp"] { --pill-color: #3fa9e0; }
-[data-theme="light"] .pill[data-pill="cuda"] { --pill-color: #e0538c; }
-[data-theme="light"] .pill[data-pill="react"] { --pill-color: #e08a3f; }
-[data-theme="light"] .pill[data-pill="oss"] { --pill-color: #2fa88f; }
-[data-theme="light"] .pill[data-pill="bayes"] { --pill-color: #8a63e6; }

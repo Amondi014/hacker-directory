@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Talen Mudaly — hacker directory</title>
-  <meta name="description" content="Talen Mudaly's personal page — CS & Maths student, MCMC samplers, open source." />
+  <title>Arpan Adhikari — hacker directory</title>
+  <meta name="description" content="Arpan Adhikari's personal page — Computer Engineering student who likes creating fun in everything, including a snake game hiding on this page." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐍</text></svg>" />
   <link rel="stylesheet" href="../../assets/style.css" />
   <link rel="stylesheet" href="styles.css" />
@@ -27,48 +27,52 @@
 
   <main class="wrap">
     <div class="profile-hero">
-      <img class="profile-avatar" src="https://github.com/TalenMud.png?size=192" alt="Talen Mudaly" onerror="this.style.display='none'" />
+      <img class="profile-avatar" src="https://github.com/adhikari-arpan.png?size=192" alt="Arpan Adhikari" onerror="this.style.display='none'" />
       <div>
-        <h1 class="profile-name">Talen Mudaly</h1>
-        <p class="profile-meta">CS & Maths Student · University of Manchester · @TalenMud</p>
+        <h1 class="profile-name">Arpan Adhikari</h1>
+        <p class="profile-meta">Computer Engineering Student · Pokhara University · @adhikari-arpan</p>
         <p class="profile-bio">
-          Building MCMC samplers in CUDA, open source contributor, MLH coach.
-          Founder of UoM Open Source Society. I like distributions that are hard
-          to sample from and code that runs on GPUs it probably shouldn't.
+          I like creating fun in all things I do — including this page. Instead
+          of another boring bio section, I built a snake game below. Beat my
+          high score, I dare you.
         </p>
         <div class="pills" style="margin-top:0.8rem;">
-          <span class="pill" data-pill="python">Python</span>
-          <span class="pill" data-pill="cpp">C++</span>
-          <span class="pill" data-pill="cuda">CUDA</span>
-          <span class="pill" data-pill="react">React</span>
-          <span class="pill" data-pill="oss">Open Source</span>
-          <span class="pill" data-pill="bayes">Bayesian Stats</span>
+          <span class="pill" style="--pill-color:#3ef2a1">Python</span>
+          <span class="pill" style="--pill-color:#4d8bff">React</span>
+          <span class="pill" style="--pill-color:#ff5cb3">Fun-driven dev</span>
         </div>
         <div class="links-row">
-          <a class="btn btn-outline" href="https://talenmud.github.io" target="_blank" rel="noopener">Website ↗</a>
-          <a class="btn btn-outline" href="https://github.com/TalenMud" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="btn btn-outline" href="https://www.arpanadhikari7.com.np/" target="_blank" rel="noopener">Website ↗</a>
+          <a class="btn btn-outline" href="https://github.com/adhikari-arpan" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
       </div>
     </div>
 
     <section class="block">
-      <h2>Metropolis&#8211;Hastings, live</h2>
-      <div class="viz-panel">
+      <h2>🐍 Byte Snake</h2>
+      <div class="game-panel">
         <p class="caption">
-          A little demo of what you can build on your own page. This is a real
-          Metropolis&#8211;Hastings sampler exploring a 2D mixture-of-Gaussians
-          target distribution — the walker proposes a random step, accepts it with
-          probability <code>min(1, p(x')/p(x))</code>, and rejects otherwise. Warmer
-          cells in the heatmap mean the chain has spent more time there, which is
-          exactly where the true density is highest.
+          Classic snake, hacker-directory flavour. Eat 🐍 to grow and score,
+          dodge or eat 🐛 at your own risk — bugs shrink your snake and cost
+          you points, just like in real software. Arrow keys or WASD to move,
+          space to pause. High score is saved locally in your browser.
         </p>
-        <div id="mcmc-canvas-wrap"></div>
+        <div class="game-canvas-wrap">
+          <canvas id="snake-canvas" width="400" height="400"></canvas>
+          <div id="snake-overlay" class="snake-overlay">
+            <div class="snake-overlay-inner">
+              <p id="snake-overlay-title">Byte Snake</p>
+              <p id="snake-overlay-sub">Press any arrow key, WASD, or the button below to start.</p>
+              <button id="snake-start-btn">start game</button>
+            </div>
+          </div>
+        </div>
         <div class="viz-controls">
-          <button id="mcmc-reset">restart chain</button>
-          <button id="mcmc-speed">speed: 1×</button>
-          <span class="stat-chip">steps: <span id="mcmc-steps">0</span></span>
-          <span class="stat-chip">accepted: <span id="mcmc-accepted">0</span></span>
-          <span class="stat-chip">acceptance rate: <span id="mcmc-rate">–</span></span>
+          <button id="snake-pause-btn">pause</button>
+          <button id="snake-restart-btn">restart</button>
+          <button id="snake-speed-btn">speed: normal</button>
+          <span class="stat-chip">score: <span id="snake-score">0</span></span>
+          <span class="stat-chip">high score: <span id="snake-highscore">0</span></span>
         </div>
       </div>
     </section>
@@ -77,16 +81,16 @@
       <h2>Currently building</h2>
       <ul class="project-list">
         <li>
-          <strong>gpu-mcmc</strong>
-          <span>Parallel Metropolis-Hastings and HMC samplers written in raw CUDA, benchmarked against Stan.</span>
+          <strong>arpanadhikari7.com.np</strong>
+          <span>My personal site and playground for whatever I'm learning that week.</span>
         </li>
         <li>
-          <strong>UoM Open Source Society</strong>
-          <span>Founded and run the university's first open source society — workshops, hack nights, first-PR onboarding.</span>
+          <strong>This page</strong>
+          <span>A snake game because a wall of text felt like a missed opportunity to have fun.</span>
         </li>
         <li>
-          <strong>MLH Coach</strong>
-          <span>Coaching student hackathon organisers across the Major League Hacking network.</span>
+          <strong>Python + React projects</strong>
+          <span>Mixing a Python backend brain with a React front end, one small project at a time.</span>
         </li>
       </ul>
     </section>
@@ -96,8 +100,7 @@
     This is my page in the <a href="../../index.html">hacker directory</a> — make your own in a PR.
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
-  <script src="mcmc.js"></script>
+  <script src="game.js"></script>
   <script>HDTheme.init();</script>
 </body>
 </html>
