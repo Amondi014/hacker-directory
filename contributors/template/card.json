@@ -1,11 +1,11 @@
 {
-  "name": "Your Name",
-  "role": "What you do — e.g. CS Student, Frontend Dev, Robotics Nerd",
-  "university": "Your school or company (optional)",
-  "github": "your-github-username",
-  "bio": "One or two sentences about what you build, what you're learning, or what you're into.",
-  "tags": ["Python", "JavaScript", "Your Tag Here"],
+  "name": "Linet Theuri",
+  "role": "Fullstack Developer",
+  "university": "Karatina University",
+  "github": "Logicflow-235",
+  "bio": "I have a money problem, so I built Track Pesa — a Kenyan-market finance tracker — and used it to teach myself backend dev (Node/Express, JWT, MongoDB).",
+  "tags": ["React", "TypeScript", "Node.js"],
   "links": {
-    "website": "https://your-site.example.com"
+    "website": "https://track-pesa.vercel.app/"
   }
 }
