@@ -1,10 +1,10 @@
 {
   "name": "Adrien Schildwachter",
-  "role": "Web Developer",
+  "role": "Aspiring Web Developer",
   "university": "Cascadia College",
   "github": "AdrienSch",
   "bio": "I've been working on front-end and back-end issues on open-source projects. In terms of tech stack, I am continuing to learn JavaScript, API Scripting, and SQL. Looking forward to expanding my skill set and learning new technologies!",
-  "tags": ["JavaScript", "SQL"],
+  "tags": ["JavaScript", "SQL", "C# (ASP.NET Core)"],
   "links": {
     "website": "https://github.com/AdrienSch"
   }
